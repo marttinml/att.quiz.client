@@ -3,7 +3,7 @@
 
     var Controller = function ($scope, $rootScope, $glo, $internal, $window) {
         
-        var socket = io.connect('https://serene-ridge-79304.herokuapp.com/');// SOcket.io
+        var socket = io.connect('https://ancient-journey-62555.herokuapp.com/');// SOcket.io
         $scope.id = '';
         $scope.attuid = '';
         $scope.nombre = '';

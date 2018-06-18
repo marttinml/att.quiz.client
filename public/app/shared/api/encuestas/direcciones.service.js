@@ -5,7 +5,7 @@
         .module('api.encuestas.direcciones', [])
         .service('$direcciones',
             function ($resource) {
-                var url = 'https://arcane-garden-60088.herokuapp.com/v0/direccion';
+                var url = 'https://rocky-basin-62683.herokuapp.com/v0/direccion';
                 return $resource(url);
             });
 })();
