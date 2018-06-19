@@ -5,7 +5,7 @@
         
         // Obtenemos el array Normal de preguntas
         //$scope.encuesta = $internal.responderEncuesta;
-        var socket = io.connect('https://ancient-journey-62555.herokuapp.com/');// SOcket.io
+        // var socket = io.connect('https://ancient-journey-62555.herokuapp.com/');// SOcket.io
         
 
         var respuesta = new $responderEncuesta();
@@ -30,7 +30,7 @@
                         if($internal.encuesta.tipoEncuesta.id === 3){
                             $internal.calificacion = data.data.calificacion;
                         }
-                        socket.emit('event-responder-encuesta', { id: $internal.responderEncuesta.idEncuesta });
+                        // socket.emit('event-responder-encuesta', { id: $internal.responderEncuesta.idEncuesta });
                         $window.location = '#/finalizar-encuesta/';
                     }else{
                         

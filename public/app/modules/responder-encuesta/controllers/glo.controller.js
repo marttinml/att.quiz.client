@@ -3,7 +3,7 @@
 
     var Controller = function ($scope, $rootScope, $glo, $internal, $window) {
         
-        var socket = io.connect('https://ancient-journey-62555.herokuapp.com/');// SOcket.io
+        // var socket = io.connect('https://ancient-journey-62555.herokuapp.com/');// SOcket.io
         $scope.id = '';
         $scope.attuid = '';
         $scope.nombre = '';
@@ -29,7 +29,7 @@
                     $rootScope.spin = false;
                 if(data.success){
                     $internal.calificacion = data.data.calificacion;
-                    socket.emit('event-responder-encuesta', { id: glo.id });
+                    // socket.emit('event-responder-encuesta', { id: glo.id });
                     $window.location = '#/finalizar-encuesta/';
                 }else{
                     $rootScope.alert = true;
