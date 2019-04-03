@@ -1,7 +1,13 @@
-<main class="background-dark">
-	<i ng-click="regresar"></i>
-    <div class="content-footer">
-        <p class="center-middle">Has completado todas las preguntas</p>   
-    </div>
-    <button type="button" class="button-dark" ng-click="save()">ENVIAR</button>
+<main class="background-dark" >
+    <span ng-show="tipoEncuestaId">
+        <i ng-click="regresar"></i>
+        <div class="content-footer" ng-show="tipoEncuestaId !== 4">
+            <p class="center-middle">Has completado todas las preguntas</p>   
+        </div>
+        <div class="content-body" ng-show="tipoEncuestaId === 4">
+            <div class="label-custom">Comentarios</div>
+            <textarea name="" id="" cols="30" rows="10" ng-model="comentario" class="textarea-custom"></textarea>
+        </div>
+        <button type="button" class="button-dark" ng-click="save()">ENVIAR</button>
+    </span>
 </main>

@@ -9,6 +9,7 @@
         
 
         var respuesta = new $responderEncuesta();
+        $scope.tipoEncuestaId = $internal.encuesta.tipoEncuesta ? $internal.encuesta.tipoEncuesta.id : false;
 
         $scope.save = function () {
 
@@ -20,7 +21,8 @@
                 respuesta.attuid = $internal.responderEncuesta.attuid;
                 respuesta.nombre = $internal.responderEncuesta.nombre;
                 respuesta.wr = $internal.responderEncuesta.wr;
-                
+                respuesta.comentario = $scope.comentario;
+
                 if(respuesta.attuid){
                     respuesta.attuid = respuesta.attuid.toUpperCase();
                 }
