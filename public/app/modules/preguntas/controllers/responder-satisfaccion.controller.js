@@ -3,6 +3,7 @@
 
     var Controller = function ($scope, $rootScope, $routeParams, $window, $internal) {
 
+        console.log($internal);
         // Obtenemos el array Normal de preguntas
         $scope.pregunta = $internal.responderEncuesta.preguntas[0];
         $scope.animationLeft = false;

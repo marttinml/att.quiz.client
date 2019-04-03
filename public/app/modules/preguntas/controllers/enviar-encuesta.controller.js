@@ -19,6 +19,7 @@
                 respuesta.preguntas = $internal.responderEncuesta.preguntas;
                 respuesta.attuid = $internal.responderEncuesta.attuid;
                 respuesta.nombre = $internal.responderEncuesta.nombre;
+                respuesta.wr = $internal.responderEncuesta.wr;
                 
                 if(respuesta.attuid){
                     respuesta.attuid = respuesta.attuid.toUpperCase();

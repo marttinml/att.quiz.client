@@ -111,23 +111,37 @@
 
                 $window.location = '#/responder-satisfaccion/';
             } else {
-                if($scope.encuesta.tipoEncuesta.id == 3){
+                if($scope.encuesta.tipoEncuesta.id === 3 || $scope.encuesta.tipoEncuesta.id === 4){
                     
-                    if($scope.encuesta.attuid  && $scope.encuesta.nombre){
-                        if( $scope.encuesta.attuid.length === 6){
-                        
-                            $scope.validATTUID(function(){
-                                console.log('OK');
-                                $window.location = '#/responder-categoria/'+$scope.encuestaId;
-                            });
-                        
+                    if($scope.encuesta.tipoEncuesta.id === 3){
+                        if($scope.encuesta.attuid  && $scope.encuesta.nombre){
+                            if( $scope.encuesta.attuid.length === 6){
+                            
+                                $scope.validATTUID(function(){
+                                    $window.location = '#/responder-categoria/'+$scope.encuestaId;
+                                });
+                            }else{
+                                $rootScope.alert = true;
+                                $rootScope.mensajeAlerta = "EL ATTUID es incorrecto";
+                            }
                         }else{
                             $rootScope.alert = true;
-                            $rootScope.mensajeAlerta = "EL ATTUID es incorrecto";
+                            $rootScope.mensajeAlerta = "Debes llenar todos los campos.";
                         }
-                    }else{
-                        $rootScope.alert = true;
-                        $rootScope.mensajeAlerta = "Debes llenar todos los campos.";
+                    }
+
+                    if($scope.encuesta.tipoEncuesta.id === 4){
+                        if($scope.encuesta.attuid  && $scope.encuesta.wr){
+                            if( $scope.encuesta.attuid.length === 6){
+                                $window.location = '#/responder-satisfaccion/';
+                            }else{
+                                $rootScope.alert = true;
+                                $rootScope.mensajeAlerta = "EL ATTUID es incorrecto";
+                            }
+                        }else{
+                            $rootScope.alert = true;
+                            $rootScope.mensajeAlerta = "Debes llenar todos los campos.";
+                        }
                     }
                 }else{
 
