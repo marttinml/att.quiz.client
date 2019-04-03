@@ -103,7 +103,8 @@
                 idEncuesta: $routeParams.id,
                 preguntas: $scope.encuesta.preguntas,
                 attuid: $scope.encuesta.attuid,
-                nombre: $scope.encuesta.nombre
+                nombre: $scope.encuesta.nombre,
+                wr: $scope.encuesta.wr
             };
             $internal.responderEncuesta.respuesta = {};
             $internal.index = 0;
