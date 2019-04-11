@@ -13,7 +13,7 @@
 
         $scope.save = function () {
 
-            if( $scope.comentario && $scope.comentario.replace(/ /g, "") !== ""){
+            // if( $scope.comentario && $scope.comentario.replace(/ /g, "") !== ""){
 
             
             if($internal.responderEncuesta){
@@ -56,10 +56,10 @@
                 $window.location = '#/error/';
             }
             
-        }else{
-            $rootScope.alert = true;
-            $rootScope.mensajeAlerta = "Los comentarios son obligatorios.";
-        }
+        // }else{
+        //     $rootScope.alert = true;
+        //     $rootScope.mensajeAlerta = "Los comentarios son obligatorios.";
+        // }
 
         };
         
