@@ -31,7 +31,7 @@
                     <h4 class="content-encuesta">Duración: <b>{{encuesta.tiempo / 60}}</b> Minutos</h4>
                 </div>
 
-                <span ng-show="encuesta.tipoEncuesta.id === 3">
+                <span ng-show="encuesta.tipoEncuesta.id === 3 || encuesta.tipoEncuesta.id === 10">
 
                     
                     <div class="form-group">
@@ -70,8 +70,6 @@
                         </div>
                     </div>
                 </span>
-                       
-
                 
             </div>
 
