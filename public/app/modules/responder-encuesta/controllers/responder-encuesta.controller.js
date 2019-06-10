@@ -148,7 +148,7 @@
                     if($scope.encuesta.tipoEncuesta.id === 10){
                         if($scope.encuesta.attuid  && $scope.encuesta.nombre){
                             if( $scope.encuesta.attuid.length === 6){
-                                $window.location = '#/responder-satisfaccion/';
+                                $window.location = '#/responder-categoria/';
                             }else{
                                 $rootScope.alert = true;
                                 $rootScope.mensajeAlerta = "EL ATTUID es incorrecto";
