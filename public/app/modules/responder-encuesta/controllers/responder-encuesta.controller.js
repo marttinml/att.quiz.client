@@ -114,7 +114,7 @@
             } else {
                 if($scope.encuesta.tipoEncuesta.id === 3 || $scope.encuesta.tipoEncuesta.id === 4 || $scope.encuesta.tipoEncuesta.id === 10){
                     
-                    if($scope.encuesta.tipoEncuesta.id === 3 || $scope.encuesta.tipoEncuesta.id === 10){
+                    if($scope.encuesta.tipoEncuesta.id === 3){
                         if($scope.encuesta.attuid  && $scope.encuesta.nombre){
                             if( $scope.encuesta.attuid.length === 6){
                             
@@ -131,7 +131,7 @@
                         }
                     }
 
-                    if($scope.encuesta.tipoEncuesta.id === 4){
+                    if($scope.encuesta.tipoEncuesta.id === 4 || $scope.encuesta.tipoEncuesta.id === 10){
                         if($scope.encuesta.attuid  && $scope.encuesta.wr){
                             if( $scope.encuesta.attuid.length === 6){
                                 $window.location = '#/responder-satisfaccion/';
