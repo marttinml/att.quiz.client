@@ -131,7 +131,7 @@
                         }
                     }
 
-                    if($scope.encuesta.tipoEncuesta.id === 4 || $scope.encuesta.tipoEncuesta.id === 10){
+                    if($scope.encuesta.tipoEncuesta.id === 4){
                         if($scope.encuesta.attuid  && $scope.encuesta.wr){
                             if( $scope.encuesta.attuid.length === 6){
                                 $window.location = '#/responder-satisfaccion/';
@@ -144,6 +144,21 @@
                             $rootScope.mensajeAlerta = "Debes llenar todos los campos.";
                         }
                     }
+
+                    if($scope.encuesta.tipoEncuesta.id === 10){
+                        if($scope.encuesta.attuid  && $scope.encuesta.nombre){
+                            if( $scope.encuesta.attuid.length === 6){
+                                $window.location = '#/responder-satisfaccion/';
+                            }else{
+                                $rootScope.alert = true;
+                                $rootScope.mensajeAlerta = "EL ATTUID es incorrecto";
+                            }
+                        }else{
+                            $rootScope.alert = true;
+                            $rootScope.mensajeAlerta = "Debes llenar todos los campos.";
+                        }
+                    }
+
                 }else{
 
                     $window.location = '#/responder-categoria/';
