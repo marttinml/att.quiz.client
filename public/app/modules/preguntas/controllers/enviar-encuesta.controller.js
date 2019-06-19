@@ -13,7 +13,7 @@
 
         $scope.save = function () {
 
-           if($internal.responderEncuesta.tipoEncuesta.id === 4){
+           if($internal.encuesta.tipoEncuesta.id === 4){
             if(  $scope.comentario && $scope.comentario.replace(/ /g, "") !== ""){
 
             
