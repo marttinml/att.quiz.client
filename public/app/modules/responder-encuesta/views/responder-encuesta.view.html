@@ -31,7 +31,7 @@
                     <h4 class="content-encuesta">Duración: <b>{{encuesta.tiempo / 60}}</b> Minutos</h4>
                 </div>
 
-                <span ng-show="encuesta.tipoEncuesta.id === 3 || encuesta.tipoEncuesta.id === 10">
+                <span ng-show="encuesta.tipoEncuesta.id === 3">
 
                     
                     <div class="form-group">
@@ -44,6 +44,23 @@
                     <div class="form-group">
                         <div ng-placeholder class="textbox" ng-model="encuesta.nombre">
                             <label>Nombre</label>
+                            <input type="text" ng-model="encuesta.nombre">
+                            <i></i>
+                        </div>
+                    </div>
+                </span>
+
+                <span ng-show="encuesta.tipoEncuesta.id === 10">
+                    <div class="form-group">
+                        <div ng-placeholder class="textbox" ng-model="encuesta.attuid">
+                            <label>ATTUID</label>
+                            <input type="text" ng-model="encuesta.attuid" maxlength="6">
+                            <i></i>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div ng-placeholder class="textbox" ng-model="encuesta.nombre">
+                            <label>Proveedor</label>
                             <input type="text" ng-model="encuesta.nombre">
                             <i></i>
                         </div>
