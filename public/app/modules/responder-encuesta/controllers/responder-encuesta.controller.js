@@ -131,7 +131,7 @@
                         }
                     }
 
-                    if($scope.encuesta.tipoEncuesta.id === 4){
+                    if($scope.encuesta.tipoEncuesta.id === 4 || $scope.encuesta.tipoEncuesta.id === 11){
                         if($scope.encuesta.attuid  && $scope.encuesta.wr){
                             if( $scope.encuesta.attuid.length === 6){
                                 $window.location = '#/responder-satisfaccion/';
